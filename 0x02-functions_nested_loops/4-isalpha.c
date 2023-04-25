@@ -1,18 +1,16 @@
 #include "main.h"
 
 /**
- * print_alphabet - Print alphabet in lowercase using only `_putchar`
- * Return: 0
+ * _isalpha - Check if character is an alphabetic character.
+ * @c: type int character
+ * Return: 1 if letter, lowercase or uppercase, and 0 otherwise
  */
 
-void print_alphabet(void)
+int _isalpha(int c)
 {
-	char c;
-
-	for (c = 'a'; c <= 'z'; c++)
-	{
-		_putchar(c);
-	}
-	_putchar('\n');
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+		return (1);
+	else
+		return (0);
 }
 
